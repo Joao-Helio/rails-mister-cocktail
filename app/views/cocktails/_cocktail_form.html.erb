@@ -1,0 +1,12 @@
+<%= simple_form_for @cocktail do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <%= f.submit "Add Cocktail", class: "btn btn-primary" %>
+
+<% end %>
+
+

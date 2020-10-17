@@ -1,0 +1,13 @@
+<div class="container m-3">
+  <h1>Cocktails View - Index</h1>
+
+  <ul>
+    <% @cocktails.each do |ct| %>
+      <li>
+        <%= link_to "#{ct.name}", cocktail_path(ct) %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h3><%= link_to "Add New Cocktail", new_cocktail_path %></h3>
+</div>
