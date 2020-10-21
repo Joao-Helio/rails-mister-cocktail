@@ -1,13 +1,21 @@
 <div class="container m-3">
-  <h1>Cocktails View - Index</h1>
-
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Cocktails View - Index</h1>
+    </div>
+    <div class="col-md-4">
+      <h3><%= link_to "Add New Cocktail", new_cocktail_path, class: "btn btn-gradient  float-right" %></h3>
+    </div>
+  </div>
   <ul>
     <% @cocktails.each do |ct| %>
       <li>
-        <%= link_to "#{ct.name}", cocktail_path(ct) %>
+        <div class="card-product">
+          <div class="card-product-infos">
+            <h2><%= link_to "#{ct.name}", cocktail_path(ct) %></h2>
+          </div>
+        </div>
       </li>
     <% end %>
   </ul>
-
-  <h3><%= link_to "Add New Cocktail", new_cocktail_path %></h3>
 </div>
