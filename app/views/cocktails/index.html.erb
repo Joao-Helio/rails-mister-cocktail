@@ -11,6 +11,11 @@
     <% @cocktails.each do |ct| %>
       <li>
         <div class="card-product">
+          <% if ct.photo.attached? %>
+            <%= cl_image_tag(ct.photo.key, crop: :fill) %>
+          <% else %>
+            <%= image_tag('cock-tail.jpg', width: 400, height: 300, crop: :fill)%>
+          <% end %>
           <div class="card-product-infos">
             <h2><%= link_to "#{ct.name}", cocktail_path(ct) %></h2>
           </div>
