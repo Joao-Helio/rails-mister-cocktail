@@ -3,6 +3,7 @@
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
+    <%= f.input :photo, as: :file %>
   </p>
 
   <%= f.submit "Add Cocktail", class: "btn btn-gradient" %>
